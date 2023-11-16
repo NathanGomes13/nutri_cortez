@@ -1,0 +1,738 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+:root {
+  --bege: #F9EDD7;
+  --size-progress-bar: 14px;
+}
+
+#main-section .calend-infos-container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.4rem;
+  background: white;
+  padding: 0;
+  margin: 100px auto;
+}
+#main-section .calend-infos-container #calendar-box {
+  padding: 50px 10px;
+  padding-bottom: 8px;
+}
+@media (max-width: 1200px) {
+  #main-section .calend-infos-container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 0;
+  }
+}
+@media (max-width: 768px) {
+  #main-section .calend-infos-container #calendar-box .fc-toolbar-title {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 576px) {
+  #main-section .calend-infos-container #calendar-box {
+    padding: 50px 0;
+  }
+  #main-section .calend-infos-container #calendar-box .fc-scrollgrid-sync-table tbody tr {
+    height: 100px;
+  }
+  #main-section .calend-infos-container #calendar-box div.fc-daygrid-day-frame {
+    border: 1px solid #f0f0f0;
+  }
+  #main-section .calend-infos-container #calendar-box .fc-toolbar-chunk {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#main-section .top-content {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+#main-section .top-content:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 450px;
+  filter: blur(0);
+  opacity: 1;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 0;
+  padding-top: 150px;
+  background-color: white;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='198'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='-10.959%25' y2='100%25'%3e%3cstop stop-color='%2301B35D' stop-opacity='.25' offset='0%25'/%3e%3cstop stop-color='%2301B35D' offset='100%25'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath fill='url(%23a)' fill-rule='evenodd' d='M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z'/%3e%3c/svg%3e"), url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='198'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='-10.959%25' y2='100%25'%3e%3cstop stop-color='%2301B35D' stop-opacity='.25' offset='0%25'/%3e%3cstop stop-color='%2301B35D' offset='100%25'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath fill='url(%23a)' fill-rule='evenodd' d='M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z'/%3e%3c/svg%3e"), url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='198'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='-10.959%25' y2='100%25'%3e%3cstop stop-color='%2301B35D' stop-opacity='.25' offset='0%25'/%3e%3cstop stop-color='%2301B35D' offset='100%25'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath fill='url(%23a)' fill-rule='evenodd' d='M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z'/%3e%3c/svg%3e");
+  background-repeat: repeat-x;
+  background-size: 1600px 50%;
+  background-position: 0 130%, -50px 130%, 500px 130%;
+  border-bottom: 8px solid white;
+  animation: 20s waves linear infinite forwards;
+}
+@keyframes waves {
+  to {
+    background-position: 1600px 130%, 3150px 130%, 5300px 130%;
+  }
+}
+#main-section .como-funciona {
+  position: relative;
+  padding: 144px 0 0 0;
+}
+#main-section .como-funciona h2 {
+  text-align: center;
+  margin-bottom: 90px;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  color: var(--green);
+}
+#main-section .como-funciona .infos-box {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-items: center;
+  justify-content: center;
+  gap: 4rem;
+  position: relative;
+}
+#main-section .como-funciona .infos-box .info {
+  margin-top: 40px;
+  max-width: 100%;
+  background-color: white;
+  padding: 28px 20px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 1px 4px, rgba(0, 0, 0, 0.1) 0px 5px 8px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+#main-section .como-funciona .infos-box .info .img {
+  aspect-ratio: 1/1;
+  width: 65%;
+  position: relative;
+  top: -110px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  margin-bottom: -100px;
+  border-radius: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+#main-section .como-funciona .infos-box .info .img svg {
+  width: 90%;
+  height: 90%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transform: scale(1);
+  transition-duration: 0.2s;
+  aspect-ratio: 1/1;
+  background-color: white;
+  padding: 30px;
+}
+#main-section .como-funciona .infos-box .info:hover img {
+  transform: scale(1.05);
+}
+#main-section .como-funciona .infos-box .info h5 {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+#main-section .como-funciona .infos-box .info p {
+  text-align: center;
+}
+#main-section .como-funciona .infos-box .info h5, #main-section .como-funciona .infos-box .info p {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 1200px) {
+  #main-section .como-funciona .infos-box {
+    gap: 1.5rem;
+  }
+  #main-section .como-funciona .infos-box .info .img {
+    width: 85%;
+    top: -75px;
+  }
+}
+@media (max-width: 991px) {
+  #main-section .como-funciona .infos-box {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  #main-section .como-funciona .infos-box .info .img {
+    width: 55%;
+    top: -65px;
+  }
+}
+@media (max-width: 576px) {
+  #main-section .como-funciona .infos-box {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 10px 24px;
+  }
+  #main-section .como-funciona .infos-box .info .img {
+    width: clamp(80px, 27vw, 200px);
+  }
+}
+
+#search-box {
+  grid-column: span 4;
+  position: relative;
+  padding: 50px 10px;
+  background: #e0ffe3;
+  transform: scale(1.03) translateX(-5px);
+}
+#search-box .tit-box {
+  margin-bottom: 20px;
+}
+#search-box .tit-box h4 {
+  color: var(--green);
+}
+#search-box .tit-box p {
+  color: #2b875b;
+}
+#search-box form input {
+  width: 100%;
+}
+#search-box .search-input-box {
+  position: relative;
+  max-width: 460px;
+  margin: 0 auto;
+}
+#search-box .search-input-box #alimento-busca {
+  padding: 12px 20px;
+  padding-left: 40px;
+  border: 2px solid var(--green);
+  font-family: "Montserrat", sans-serif;
+}
+#search-box .search-input-box #alimento-busca + i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7e7e7e;
+}
+#search-box #informacoes-nutricionais {
+  font-family: "Varela Round", sans-serif;
+  max-width: 460px;
+  margin: 0 auto;
+  margin-top: 28px;
+  background-color: white;
+}
+#search-box #informacoes-nutricionais h2 {
+  text-align: center;
+  font-weight: 500;
+  background-color: var(--green);
+  color: white;
+  border-bottom: none;
+  padding: 20px;
+}
+#search-box #informacoes-nutricionais .info-box {
+  padding: 20px 28px 0 28px;
+}
+#search-box #informacoes-nutricionais .info-box .info-tit {
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+#search-box #informacoes-nutricionais .info-box .info-content {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+#search-box #informacoes-nutricionais .info-box .info-content.minus-spacing {
+  letter-spacing: -3px;
+}
+#search-box #informacoes-nutricionais .info-box #receita-span {
+  width: 100%;
+  display: block;
+  padding-bottom: 10px;
+  text-align: center;
+}
+#search-box #informacoes-nutricionais .info-box #main-top-info {
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 3px solid #dfdfdf;
+  padding: 10px;
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+#search-box #informacoes-nutricionais .info-box #main-top-info p:nth-of-type(1) {
+  border-right: 1px solid #dfdfdf;
+}
+#search-box #informacoes-nutricionais .info-box #main-top-info p:nth-of-type(2) {
+  padding-left: 20px;
+}
+#search-box #informacoes-nutricionais .info-box #main-mid-info {
+  margin-top: 10px;
+  border: 2px solid #dfdfdf;
+  border-radius: 20px 20px 0 0;
+  padding: 8px 20px;
+}
+#search-box #informacoes-nutricionais .info-box #main-mid-info p {
+  border-bottom: 1px solid #dfdfdf;
+}
+#search-box #informacoes-nutricionais #bottom-info-span {
+  color: #a1a1a1;
+  font-weight: 300;
+  padding: 8px 20px;
+  display: block;
+  padding: 20px 2px;
+  border-radius: 0 0 4px 4px;
+}
+#search-box #resultado-busca {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 204px;
+  max-height: 500px;
+  font-weight: 500;
+  overflow-y: scroll;
+  font-size: 1.05rem;
+  width: 100%;
+  max-width: 460px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 4px;
+  font-family: "Montserrat", sans-serif;
+}
+#search-box #resultado-busca ul {
+  width: 100%;
+}
+#search-box #resultado-busca ul li {
+  width: 100%;
+  background-color: white;
+  transition-duration: 0.2s;
+  padding: 0px 14px;
+  line-height: 2.5rem;
+}
+#search-box #resultado-busca ul li a {
+  padding: 0;
+  display: block;
+  width: 100%;
+  color: var(--grey-parag);
+}
+#search-box #resultado-busca ul li:hover {
+  background-color: rgb(213, 255, 213);
+}
+@media (max-width: 576px) {
+  #search-box {
+    transform: scale(1) translateX(0px);
+  }
+}
+
+.harris-box .informacoes-nutricionais-box {
+  display: grid;
+  grid-template-columns: 3;
+  grid-template-rows: 2;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 6px;
+  gap: 1rem;
+}
+.harris-box .informacoes-nutricionais-box .p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.4rem;
+  padding: 10px;
+}
+.harris-box .informacoes-nutricionais-box .p .tit-infos {
+  color: var(--grey-parag);
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.harris-box .informacoes-nutricionais-box .p .infos {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--grey-parag);
+}
+.harris-box .informacoes-nutricionais-box .p .progresso-bar {
+  background-color: #e7e7e7;
+  border-radius: 100vh;
+  position: relative;
+  width: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10px;
+  overflow: hidden;
+}
+.harris-box .informacoes-nutricionais-box .p .progresso-bar .progresso {
+  transition: all 1s ease-in-out;
+  width: auto;
+  height: 100%;
+  background: var(--green);
+}
+.harris-box .informacoes-nutricionais-box .p:nth-of-type(1) {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+}
+.harris-box .informacoes-nutricionais-box .p:nth-of-type(1) .input-progress-bar {
+  display: none;
+}
+.harris-box .informacoes-nutricionais-box .p:nth-of-type(1) .overflow-bottom {
+  position: relative;
+  bottom: 0;
+  width: 150px;
+  height: 150px;
+}
+.harris-box .informacoes-nutricionais-box .p:nth-of-type(1) .overflow-bottom:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% + 8px);
+  transform: translateX(-8px) translateY(8px);
+  height: calc(50% + 8px);
+  background-color: white;
+  z-index: 9;
+}
+.harris-box .informacoes-nutricionais-box .p:nth-of-type(1) .overflow-bottom .content {
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  top: 50%;
+  padding-top: 10px;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 99;
+}
+.harris-box .informacoes-nutricionais-box .p:nth-of-type(1) .overflow-bottom .content .tit-infos {
+  font-size: 1.3rem;
+}
+.harris-box .informacoes-nutricionais-box .p:nth-of-type(1) .overflow-bottom .content .infos {
+  font-size: 1.1rem;
+}
+.harris-box .informacoes-nutricionais-box .p:nth-of-type(1) .semi-circle {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  position: absolute;
+  align-self: flex-end;
+  transition: all 1s ease-in-out;
+}
+.harris-box .informacoes-nutricionais-box .p:nth-of-type(1) .semi-circle:after, .harris-box .informacoes-nutricionais-box .p:nth-of-type(1) .semi-circle:before {
+  transition: all 1s ease-in-out;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.harris-box .informacoes-nutricionais-box .p:nth-of-type(1) .semi-circle:before {
+  background: linear-gradient(to bottom, var(--bg-color) 0%, var(--bg-color) 50%, var(--green) 50%, var(--green) 100%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: rotate(0);
+  animation: rotate-semi-circle 1s 1.5s ease-in-out forwards;
+}
+.harris-box .informacoes-nutricionais-box .p:nth-of-type(1) .semi-circle:after {
+  background-color: white;
+  top: var(--size-progress-bar);
+  right: var(--size-progress-bar);
+  bottom: var(--size-progress-bar);
+  left: var(--size-progress-bar);
+}
+.harris-box .informacoes-nutricionais-box .p:not(.p:nth-of-type(1)) {
+  grid-column: span 1;
+  margin-top: -50px;
+  z-index: 99;
+}
+@media (max-width: 991px) {
+  .harris-box .informacoes-nutricionais-box {
+    gap: 4rem;
+    padding-bottom: 0;
+  }
+  .harris-box .informacoes-nutricionais-box .p:nth-of-type(1) .overflow-bottom .content .tit-infos {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .harris-box .informacoes-nutricionais-box .p:nth-of-type(1) {
+    grid-column: span 1;
+  }
+  .harris-box .informacoes-nutricionais-box .p:not(.p:nth-of-type(1)) {
+    margin-top: -110px;
+  }
+  .harris-box .informacoes-nutricionais-box .p {
+    gap: 0.1rem;
+  }
+  .harris-box .informacoes-nutricionais-box .p .tit-infos {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .harris-box .informacoes-nutricionais-box {
+    gap: 4rem;
+    padding-bottom: 0;
+  }
+  .harris-box .informacoes-nutricionais-box .p:nth-of-type(1) .overflow-bottom .content .tit-infos {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .harris-box .informacoes-nutricionais-box .p:nth-of-type(1) {
+    grid-column: span 1;
+  }
+  .harris-box .informacoes-nutricionais-box .p:not(.p:nth-of-type(1)) {
+    margin-top: -110px;
+  }
+  .harris-box .informacoes-nutricionais-box .p {
+    gap: 0.1rem;
+  }
+  .harris-box .informacoes-nutricionais-box .p .tit-infos {
+    font-size: 1rem;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .harris-box .informacoes-nutricionais-box .p .infos {
+    margin-left: auto;
+    width: -moz-fit-content;
+    width: fit-content;
+    transform: translateX(22px) translateY(-34px);
+  }
+  .harris-box .informacoes-nutricionais-box .p .progresso-bar {
+    left: 0;
+    transform: translateX(0);
+    width: 115%;
+  }
+}
+
+.calorias-refeicoes p {
+  outline: 1px dotted red;
+  display: flex;
+  gap: 1rem;
+}
+
+#grafico {
+  padding-bottom: 80px;
+}
+#grafico .container {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+#grafico .content {
+  display: flex;
+  gap: 1.25rem;
+  padding: 50px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+  grid-column: span 2;
+  text-align: center;
+  flex-direction: column;
+  background-color: #e0ffe3;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 10px -3px, rgba(0, 0, 0, 0.1) 0px -3px 0px inset;
+}
+#grafico .content .titulo-medio {
+  color: var(--green);
+}
+#grafico .content p {
+  font-family: "Montserrat", sans-serif;
+}
+#grafico .content p:nth-of-type(1) {
+  color: #2b875b;
+  margin-top: -16px;
+}
+#grafico #graficoPesoSemanal {
+  grid-column: span 4;
+  height: auto !important;
+  width: 100% !important;
+}
+#grafico .content.mobile {
+  display: none;
+}
+#grafico .desktop {
+  display: block;
+}
+#grafico .mobile {
+  display: none;
+}
+#grafico .content.desktop {
+  display: flex;
+}
+@media (max-width: 1400px) {
+  #grafico .content {
+    width: 90%;
+  }
+}
+@media (max-width: 1200px) {
+  #grafico .container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  #grafico .mobile {
+    display: block;
+  }
+  #grafico .content.mobile {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  #grafico .content.desktop {
+    display: none;
+  }
+  #grafico .desktop {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  #grafico {
+    margin-top: -60px;
+  }
+}
+
+#cards {
+  padding: 80px 0 140px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+#cards .titulo-medio {
+  text-transform: uppercase;
+}
+#cards h6 {
+  margin-bottom: 70px;
+}
+#cards .swiper1,
+#cards .swiper2 {
+  position: relative;
+  overflow: hidden;
+}
+#cards .swiper1:before,
+#cards .swiper2:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(to right, var(--bg-color), transparent);
+  z-index: 9;
+}
+#cards .swiper1:after,
+#cards .swiper2:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(to left, var(--bg-color), transparent);
+  z-index: 9;
+}
+#cards .swiper1 .swiper-slide .card,
+#cards .swiper2 .swiper-slide .card {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #181818 !important;
+  height: 100%;
+  min-height: 360px;
+  margin-top: 84px;
+  border: 5px solid white;
+}
+#cards .swiper1 .swiper-slide .card:before,
+#cards .swiper2 .swiper-slide .card:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../imagens/home/cards/fundo-de-textura-padrao-de-marmore-preto-marmore-da-tailandia-marmore-natural-abstrato.jpg) no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+  border-radius: 30px;
+  z-index: 0;
+}
+#cards .swiper1 .swiper-slide .card img,
+#cards .swiper2 .swiper-slide .card img {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateY(-90px) translateX(-50%);
+  width: 80%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 100vh;
+  border: 5px solid white;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#cards .swiper1 .swiper-slide .card .card-body,
+#cards .swiper2 .swiper-slide .card .card-body {
+  margin-top: -65px;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+}
+#cards .swiper1 .swiper-slide .card .card-body .cal-peso-box,
+#cards .swiper2 .swiper-slide .card .card-body .cal-peso-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#cards .swiper1 .swiper-slide .card .card-body h1, #cards .swiper1 .swiper-slide .card .card-body h2, #cards .swiper1 .swiper-slide .card .card-body h3, #cards .swiper1 .swiper-slide .card .card-body h4, #cards .swiper1 .swiper-slide .card .card-body h5, #cards .swiper1 .swiper-slide .card .card-body h6, #cards .swiper1 .swiper-slide .card .card-body p,
+#cards .swiper2 .swiper-slide .card .card-body h1,
+#cards .swiper2 .swiper-slide .card .card-body h2,
+#cards .swiper2 .swiper-slide .card .card-body h3,
+#cards .swiper2 .swiper-slide .card .card-body h4,
+#cards .swiper2 .swiper-slide .card .card-body h5,
+#cards .swiper2 .swiper-slide .card .card-body h6,
+#cards .swiper2 .swiper-slide .card .card-body p {
+  color: #eee;
+}
+#cards .swiper1 .swiper-button-prev,
+#cards .swiper2 .swiper-button-prev {
+  transform: translateX(-10px);
+}
+#cards .swiper1 .swiper-button-next,
+#cards .swiper2 .swiper-button-next {
+  transform: translateX(10px);
+}
+#cards .swiper1 .swiper-button-next:after,
+#cards .swiper1 .swiper-button-prev:after,
+#cards .swiper2 .swiper-button-next:after,
+#cards .swiper2 .swiper-button-prev:after {
+  color: var(--orange);
+}
+@media (max-width: 1401px) {
+  #cards .swiper1 .swiper-slide .card img,
+  #cards .swiper2 .swiper-slide .card img {
+    width: 70%;
+  }
+}
+@media (max-width: 1200px) {
+  #cards .swiper1 .swiper-slide .card img,
+  #cards .swiper2 .swiper-slide .card img {
+    width: 65%;
+  }
+}
+@media (max-width: 992px) {
+  #cards .swiper1 .swiper-slide .card img,
+  #cards .swiper2 .swiper-slide .card img {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  #cards .swiper1 .swiper-slide .card,
+  #cards .swiper2 .swiper-slide .card {
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 576px) {
+  #cards .swiper1 .swiper-slide,
+  #cards .swiper2 .swiper-slide {
+    padding: 0 50px;
+  }
+  #cards .swiper1 .swiper-slide .card,
+  #cards .swiper2 .swiper-slide .card {
+    padding: 10px 30px;
+    height: 300px;
+  }
+  #cards .swiper1 .swiper-slide .card img,
+  #cards .swiper2 .swiper-slide .card img {
+    width: 50%;
+  }
+}/*# sourceMappingURL=home.css.map */

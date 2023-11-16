@@ -1,0 +1,188 @@
+.all{
+    display: flex;
+}
+#navbar{
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    border-right: 1px solid rgb(234, 234, 234);
+    background-color: #32363c;
+    padding-top: 50px;
+}
+#navbar header{
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.4em;
+}
+#navbar ul{
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-top: 40px;
+}
+#navbar li a{
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding-left: 25px;
+    padding: 20px 14px;
+    border-bottom: 2px solid var(--grey-parag);
+}
+#navbar li a:hover{
+color: #bcbcbc;
+    
+}
+#main-doc{
+    margin-left: 300px;
+    padding: 0px 10px 50px 10px;
+}
+#main-doc header{
+    font-size: 30px;
+    font-weight: 500;
+    padding-bottom: 30px;
+    padding-top: 90px;
+}
+#main-doc .container{
+    max-width: 1400px;
+    width: 100%;
+}
+#main-doc article{
+    font-family: 'Montserrat', sans-serif;
+    max-width: 100%;
+    max-height: 500px;
+    overflow: scroll;
+}
+@media (max-width: 500px){
+    .navbar ul{
+    flex-direction: row;
+    } 
+}
+.topico{
+    margin: 10px;
+    color: #f2f2f2;
+}
+table {
+    border-collapse: collapse;
+    position: relative;
+}
+thead{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+}
+
+th{
+    background-color: #32363c !important;
+    color: white;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+th:nth-of-type(3){
+    width: 230px !important;
+}
+th.zeroum{
+    background-color: var(--grey-parag) !important;
+    font-size: 14px;
+}
+th:nth-last-of-type(5){
+    width: 120px !important;
+}
+td.number{
+    text-align: center;
+    max-width: 100px !important;
+}
+th.text-center{
+    max-width: 100px !important;
+}
+th{
+    min-width: 100px !important;
+}
+td i{
+    transform: scale(1);
+    transition-duration: .2s;
+}
+td i:hover{
+    transform: scale(1.2);
+}
+.high-width{
+    width: 90% !important;
+}
+tr{
+    color: rgb(0, 0, 0);
+}
+
+#admin-edit td input{
+    background-color: none;
+    border: 1px solid var(--grey-parag);
+    width: 100%;
+    padding: 2px 4px;
+}
+#admin-edit #nome-prato{
+    width: 300px;
+}
+@media (max-width: 1750px){
+    #main-doc .container{
+        max-width: 1250px;
+    }
+}
+@media (max-width: 1600px){
+    #main-doc .container{
+        max-width: 1100px;
+    }
+}
+@media (max-width: 1450px){
+    #main-doc .container{
+        max-width: 950px;
+    }
+}
+@media (max-width: 1300px){
+    #main-doc .container{
+        max-width: 800px;
+    }
+}
+@media (max-width: 1150px){
+    #main-doc .container{
+        max-width: 650px;
+    }
+}
+@media (max-width: 950px){
+    #navbar{
+        width: 220px;
+    }
+    #main-doc{
+        margin-left: 215px;
+    }
+    #main-doc .container{
+        max-width: 650px;
+    }
+}
+.alert.alert-success{
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+}
+.profile-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.profile-box .button{
+    padding: 10px;
+    text-transform: capitalize !important;
+}
+.profile-box a.user-button:hover{
+    color: white !important;
+}
+.profile-box a.user-button i{
+    padding: 0 10px 0 6px !important;
+}
+.navbar{
+    justify-content: center;
+}

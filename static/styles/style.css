@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Raleway:wght@300;400;500&family=Ubuntu:wght@300;400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+:root {
+  --bg-color: #f2f2f2;
+  --dark-bg-color: #21222b;
+  --green: #01B35D;
+  --orange: #F26B23;
+  --danger: #dc3545;
+  --grey-tit: #353b41;
+  --grey-parag: #494f53;
+  --light-color-menu: #FCEED3;
+  --dark-color-menu: #B19A82;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--green) var(--bg-color);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  border-radius: 10px;
+  border: 3px solid var(--bg-color);
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background: var(--bg-color);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+h6, h5, h4, h3, h2, h1, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h6, h5, h4, h3, h2, h1 {
+  font-weight: var(--bold);
+  color: var(--grey-tit);
+}
+
+p {
+  color: var(--grey-parag);
+  font-size: 15px;
+}
+
+.titulo {
+  font-size: 50px;
+}
+
+.titulo-medio {
+  font-size: 28px;
+}
+
+.regular {
+  font-weight: var(--regular);
+}
+
+.medium {
+  font-weight: var(--medium);
+}
+
+.bold {
+  font-weight: var(--bold);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.green {
+  color: var(--green);
+}
+
+.button {
+  text-transform: uppercase;
+  padding: 13px 50px;
+  border-radius: 100vh;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: 0.2s;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 1rem;
+}
+.button:hover, .button:focus, .button:active {
+  outline: none;
+  border: none;
+}
+
+.orange-button {
+  background-color: var(--orange);
+}
+.orange-button:hover {
+  background: #f18100;
+}
+
+.green-button {
+  background-color: var(--green);
+}
+.green-button.login-button {
+  padding: 10px 17px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+.green-button.login-button i {
+  font-size: 1.1rem;
+}
+.green-button:hover {
+  background: #14db7b;
+}
+
+.cancel-button {
+  background: none;
+  color: #494f53;
+  border: 1px solid #494f53;
+}
+.cancel-button:hover {
+  border: 1px solid;
+  color: white;
+  background-color: #494f53;
+  border: 1px solid #494f53;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input:not(#idade)::-webkit-outer-spin-button,
+input:not(#idade)::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number]:not(#idade) {
+  -moz-appearance: textfield;
+}
+
+.controllSize {
+  text-align: justify;
+}
+.controllSize a {
+  transition: 0.5s ease-in-out;
+}
+.controllSize .boxCtrl {
+  display: flex;
+  align-items: center;
+}
+.controllSize .boxCtrl a {
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #f4f4f4;
+  border: 3px solid #fff;
+  color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+}
+.controllSize .boxCtrl a:hover {
+  background-color: #c8c8c8;
+  border-color: #333;
+}
+.controllSize .boxCtrl a#contrast-b {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+.controllSize .boxCtrl a#contrast-w {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Constrast White */
+html body.contrast-white {
+  background-color: #fff !important;
+  color: #333 !important;
+  box-shadow: none;
+}
+html body.contrast-white .trigger-menu-wrapper.active::before {
+  background-color: white !important;
+}
+html body.contrast-white #header .trigger-menu-wrapper::before {
+  background-color: white !important;
+}
+html body.contrast-white .orange-button:hover {
+  background: grey !important;
+}
+html body.contrast-white .orange-button {
+  background-color: black !important;
+}
+html body.contrast-white #como-comeco .container:before {
+  background-color: black !important;
+}
+html body.contrast-white #como-comeco .infos-div .info .img {
+  border: 2px solid black !important;
+}
+html body.contrast-white #como-comeco .infos-div .info span {
+  background: black !important;
+}
+html body.contrast-white #como-comeco .infos-div .info span p {
+  color: white !important;
+}
+html body.contrast-white #avaliacoes .container .swiper .swiper-wrapper .swiper-slide {
+  border: 2px solid black !important;
+}
+html body.contrast-white h1, html body.contrast-white h2, html body.contrast-white h3, html body.contrast-white h4, html body.contrast-white p {
+  color: #333 !important;
+}
+html body.contrast-white .intro-text h1 {
+  color: white !important;
+}
+html body.contrast-white #start-reading {
+  background-color: #000000;
+  color: white;
+}
+html body.contrast-white #stop-reading {
+  background-color: #000000;
+  color: white;
+}
+html body.contrast-white #cards .swiper1 .swiper-slide .card .card-body p, html body.contrast-white #cards .swiper1 .swiper-slide .card .card-body .cal-peso-box, html body.contrast-white #cards .swiper2 .swiper-slide .card .card-body p, html body.contrast-white #cards .swiper2 .swiper-slide .card .card-body .cal-peso-box {
+  color: white !important;
+}
+
+/* Constrast Black */
+html body.contrast-black {
+  background-color: var(--dark-bg-color) !important;
+  color: #fff !important;
+  box-shadow: none;
+}
+html body.contrast-black h1, html body.contrast-black h2, html body.contrast-black h3, html body.contrast-black h4, html body.contrast-black h5, html body.contrast-black h6, html body.contrast-black p, html body.contrast-black a {
+  color: #fff !important;
+}
+html body.contrast-black #header .nav-container #nav-header ul a {
+  color: white !important;
+}
+html body.contrast-black .trigger-menu-wrapper.active::before {
+  background-color: var(--dark-bg-color) !important;
+}
+html body.contrast-black #header .trigger-menu-wrapper::before {
+  background-color: var(--dark-bg-color);
+}
+html body.contrast-black #value-proposition .text-content h1, html body.contrast-black #value-proposition .text-content p {
+  color: black !important;
+}
+html body.contrast-black #value-proposition .container:before {
+  background: linear-gradient(180deg, rgba(242, 242, 242, 0) 0%, #333 100%);
+}
+html body.contrast-black #avaliacoes .container .swiper .swiper-wrapper .swiper-slide .content-box p {
+  color: black !important;
+}
+html body.contrast-black #value-proposition h4.medium.orange {
+  color: black !important;
+}
+html body.contrast-black #main-section .top-content:before {
+  background-color: var(--dark-bg-color);
+}
+html body.contrast-black #main-section .como-funciona .infos-box .info {
+  background-color: #24262e;
+  box-shadow: rgba(255, 255, 255, 0) 0px 1px 4px, rgba(255, 255, 255, 0.1) 0px 5px 8px -3px, rgba(252, 252, 252, 0.2) 0px -3px 0px inset;
+}
+html body.contrast-black #main-section .como-funciona .infos-box .info .img svg {
+  background-color: #24262e;
+}
+html body.contrast-black #main-section .como-funciona .infos-box .info .img svg #SVGRepo_iconCarrier {
+  background-color: blue !important;
+}
+html body.contrast-black #main-section .como-funciona .infos-box .info .img svg #SVGRepo_iconCarrier path {
+  fill: white !important;
+}
+html body.contrast-black #main-section .calend-infos-container {
+  background: rgb(44, 44, 53) !important;
+}
+html body.contrast-black #calendar td.fc-daygrid-day div.fc-daygrid-day-frame {
+  background-color: #24262e;
+}
+html body.contrast-black #calendar td.fc-daygrid-day div.fc-daygrid-day-frame:hover {
+  background-color: #303030;
+}
+html body.contrast-black #search-box h4, html body.contrast-black #search-box p {
+  color: #4b4b4b !important;
+}
+html body.contrast-black #search-box #receita-span,
+html body.contrast-black #search-box #quantidade-span {
+  color: var(--grey-parag) !important;
+}
+html body.contrast-black #search-box #resultado-busca ul li a {
+  color: var(--grey-parag) !important;
+}
+html body.contrast-black .container #graficoPesoSemanal {
+  background: linear-gradient(0deg, #000c01, #0a2913, transparent 99%) !important;
+}
+html body.contrast-black .content .titulo-medio {
+  color: var(--green) !important;
+}
+html body.contrast-black .content p:nth-of-type(1) {
+  color: #2b875b !important;
+}
+html body.contrast-black .content p {
+  color: var(--grey-parag) !important;
+}
+html body.contrast-black .content p a {
+  color: blue !important;
+}
+html body.contrast-black #cards .swiper1:before, html body.contrast-black #cards .swiper2:before {
+  background: linear-gradient(to right, var(--dark-bg-color), transparent);
+}
+html body.contrast-black #cards .swiper1:after, html body.contrast-black #cards .swiper2:after {
+  background: linear-gradient(to left, var(--dark-bg-color), transparent);
+}
+html body.contrast-black .boxCtrl a:not(#contrast-b) {
+  color: #333 !important;
+}
+html body.contrast-black header:not(.prato, .topico) {
+  background-color: rgb(39, 39, 39);
+}
+html body.contrast-black .text-muted {
+  color: rgb(226, 226, 226) !important;
+}
+html body.contrast-black #start-reading {
+  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+html body.contrast-black #stop-reading {
+  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+html body.contrast-black #main-doc table tbody tr {
+  color: white !important;
+}
+html body.contrast-black .box-form::before {
+  background-color: var(--dark-bg-color);
+  opacity: 0.9;
+}
+html body.contrast-black .informacoes-detalhadas h2,
+html body.contrast-black .informacoes-detalhadas p {
+  color: var(--grey-parag) !important;
+}
+
+/* Constrast Black(profile) */
+html body#profile.contrast-black:before {
+  background-color: rgb(3, 3, 12);
+  opacity: 0.8;
+}
+html body#profile.contrast-black .container {
+  background-color: var(--dark-bg-color);
+}
+html body#profile.contrast-black .seta svg {
+  fill: white;
+}
+html body#profile.contrast-black input, html body#profile.contrast-black select {
+  border: 2px solid #dfdfdf;
+  background: #232530;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

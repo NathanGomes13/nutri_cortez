@@ -1,0 +1,128 @@
+#cadastro-login-sec{
+    height: 100%;
+    min-height: 100svh;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../imagens/login-cadastro/bg-login-1200x.jpg) no-repeat center right;
+        background-size: cover;
+        z-index: -1;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 200svw;
+        left: -100svw;
+        height: 100%;
+        background: linear-gradient(to top, #f2f2f4, #fdfdfd, #f1f1f1);
+        z-index: -2;
+    }
+    .container{
+        display: grid;
+        align-items: center;
+        min-height: 100svh;
+        padding: 0;
+    }
+    @media (max-width: 1100px){
+        &:before{background: url(../imagens/login-cadastro/bg-login-960x.jpg) no-repeat center right;
+        background-size: cover; }
+    }
+    @media (max-width: 768px){
+        &:before{background: url(../imagens/login-cadastro/bg-login-630x.jpg) no-repeat center center;
+        background-size: cover;}
+        .box-form{
+            padding: 120px 20px;
+            &::before{
+                content: '';
+                background-color: rgba(255, 255, 255, 0.95);
+            }
+        }
+    }
+    @media (max-width: 575px){
+        .box-form{
+            overflow: hidden;
+        }
+    }
+}
+.login-button{
+    display: none !important;
+}
+.trigger-menu-wrapper{
+    max-width: 300px;
+    #nav-header{
+        ul li:not(:nth-of-type(1)){
+            display: none;
+        }
+    }
+}
+
+.box-form{
+    padding: 120px 70px;
+    max-width: 500px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 1000%;
+        left: -900%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: -1;
+    }
+    form{
+        display: flex;
+        max-height: 70%;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 50px;
+        .error{
+            color: red;
+            background-color: #FFDCE0;
+            // border: 1px solid red;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+        }
+        label{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            position: relative;
+            span{
+                padding-left: 8px;
+                font-size: 1rem;
+            }
+            input, select{
+                background-color: #F5F5F5;
+                padding: 8px 15px;
+                border-bottom: 1px solid #899297;
+                border-radius: 3px;
+                padding-right: 40px;
+            }
+            i{
+                position: absolute;
+                bottom: 14px;
+                right: 22px;
+                transform: translateX(50%);
+            }
+        }
+    }
+}
+.hide{
+    display: none;
+}
