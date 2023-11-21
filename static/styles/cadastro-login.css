@@ -97,7 +97,7 @@
   margin-top: 50px;
 }
 .box-form form .error {
-  color: red;
+  color: red !important;
   background-color: #FFDCE0;
   border-radius: 5px;
   padding: 10px 15px;

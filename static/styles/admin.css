@@ -1,5 +1,5 @@
-.all{
-    display: flex;
+html{
+    overflow-x: scroll !important;
 }
 #navbar{
     position: fixed;
@@ -8,6 +8,7 @@
     border-right: 1px solid rgb(234, 234, 234);
     background-color: #32363c;
     padding-top: 50px;
+    z-index: 0;
 }
 #navbar header{
     text-align: center;
@@ -32,8 +33,10 @@ color: #bcbcbc;
     
 }
 #main-doc{
-    margin-left: 300px;
+    position: relative;
+    left: 300px;
     padding: 0px 10px 50px 10px;
+    background: var(--dark-bg-color);
 }
 #main-doc header{
     font-size: 30px;
@@ -152,9 +155,10 @@ tr{
 @media (max-width: 950px){
     #navbar{
         width: 220px;
+        overflow-y: scroll;
     }
     #main-doc{
-        margin-left: 215px;
+        left: 215px;
     }
     #main-doc .container{
         max-width: 650px;
@@ -185,4 +189,9 @@ tr{
 }
 .navbar{
     justify-content: center;
+}
+#footer{
+    background: var(--dark-bg-color);
+    position: relative;
+    z-index: 1;
 }

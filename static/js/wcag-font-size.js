@@ -24,7 +24,7 @@ $(document).ready(function(){
 	applySettings();
 
 	/* Increase Text */
-	$("#increase-text").click(function(){
+	$(".increase-text").click(function(){
 		if(fontSize >= 24) {
 			return false;
 		 } else {
@@ -35,7 +35,7 @@ $(document).ready(function(){
 	});
 
 	/* Decrease Text */
-	$("#decrease-text").click(function(){
+	$(".decrease-text").click(function(){
 		if(fontSize <= 10) {
 			return false;
 		} else {
@@ -46,7 +46,7 @@ $(document).ready(function(){
 	});
 
 	/* Default */
-	$("#normal-text").click(function(){
+	$(".normal-text").click(function(){
 		fontSize = 16;
 		$("p, h4, h6").css("font-size", fontSize + "px");
 		localStorage.setItem('fontSize', fontSize);
@@ -56,14 +56,14 @@ $(document).ready(function(){
 	});
 
 	/* Contrast Black */
-	$("#contrast-b").click(function(){
+	$(".contrast-b").click(function(){
 		$('body').addClass("contrast-black");
 		$('body').removeClass("contrast-white");
 		localStorage.setItem('contrastMode', 'black');
 	});
 
 	/* Contrast White */
-	$("#contrast-w").click(function(){
+	$(".contrast-w").click(function(){
 		$('body').addClass("contrast-white");
 		$('body').removeClass("contrast-black");
 		localStorage.setItem('contrastMode', 'white');

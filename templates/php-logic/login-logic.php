@@ -29,16 +29,15 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 	}
     //Caso NÃO tenha nada em branco
     else{
-        //Checar email = email no banco de dados e senha = senha
-		$sql = "SELECT * FROM usuarios WHERE email='$email' AND senha='$senha'";
-
+        //Checar email = email no banco de dados
+		$sql = "SELECT * FROM usuarios WHERE email='$email' LIMIT 1";
 		$result = mysqli_query($conn, $sql);
 
         //Se alguma linha for encontrada:
 		if (mysqli_num_rows($result)) {
 			$row = mysqli_fetch_assoc($result);
-            //Se o email for estritamente igual o email digitando e senha...
-            if ($row['email'] === $email && $row['senha'] === $senha) {
+            //Se o email for estritamente igual o email digitado e senha...
+            if ($row['email'] === $email && password_verify($senha, $row['senha'])) {
                 //dados da session
             	$_SESSION['id'] = $row['ID'];
             	$_SESSION['nome'] = $row['nome'];

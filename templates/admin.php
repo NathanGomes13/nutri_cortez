@@ -47,20 +47,19 @@ if($is_admin == 1){
 </head>
 <body>
     <section>
-    <div class="all">
         <nav id="navbar">
         <div class="profile-box">
             <a href="profile.php" class="regular button green-button user-button"><i class="fa-solid fa-user"></i><?php echo $nome_usuario; ?></a>
-            <a href="php-logic/logout.php" class="regular button logout-button"><i class="fa-solid fa-right-to-bracket"></i></a>
+            <a href="profile.php" class="regular button logout-button"><i class="fa-solid fa-circle-chevron-left"></i></a>
         </div>
         <!-- Acessibilidade -->
         <nav class="navbar navbar-default navbar-fixed-top navbar-shrink controllSize">
             <div class="boxCtrl" style="font-size: 23.5px;"> 
-                <a href="javascript:void(0);" id="decrease-text" title="Diminuir fonte">A-</a> 
-                <a href="javascript:void(0);" id="increase-text" title="Aumentar fonte">A+</a> 
-                <a href="javascript:void(0);" id="normal-text" 	 title="Fonte normal">A</a> 
-                <a href="javascript:void(0);" id="contrast-b" 	 title="Contraste preto/branco">A</a> 
-                <a href="javascript:void(0);" id="contrast-w" 	 title="Contraste branco/preto" >A</a>
+                <a href="javascript:void(0);" class="decrease-text" title="Diminuir fonte">A-</a> 
+                <a href="javascript:void(0);" class="increase-text" title="Aumentar fonte">A+</a> 
+                <a href="javascript:void(0);" class="normal-text" 	 title="Fonte normal">A</a> 
+                <a href="javascript:void(0);" class="contrast-b" 	 title="Contraste preto/branco">A</a> 
+                <a href="javascript:void(0);" class="contrast-w" 	 title="Contraste branco/preto" >A</a>
             </div>
         </nav>
         <header class="topico">Admin Database</header>
@@ -484,11 +483,7 @@ if($is_admin == 1){
         </section>
       </div>
     </main>
-  </div>
     </section>
-    <?php
-        include_once 'footer-home.php';
-    ?>
     <!-- jquery -->
     <script src="../static/js/jquery.js"></script>
     <!-- bootstrap -->

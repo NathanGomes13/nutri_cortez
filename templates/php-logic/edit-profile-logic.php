@@ -10,8 +10,16 @@ if (isset($_POST['editar_perfil'])){
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     if (!empty($_POST['password1'])) {
-        $senha = $_POST['password1'];
+        $senha_usuario = $_POST['password1'];
+        $senha2_usuario = $_POST['password2'];
+        if($senha_usuario === $senha2_usuario){
+            $senha = password_hash($_POST['password1'], PASSWORD_DEFAULT);
+        }else{
+            header("Location: ../profile.php?error=As senhas devem ser iguais.");
+            exit();
+        }
     } else {
+        //mantenha a senha
         $senha = $_SESSION['senha'];
     }
     

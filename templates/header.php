@@ -35,17 +35,27 @@
                             <li><a href="#como-comeco" class="link-nav link">COMO FUNCIONA</a></li>
                             <li><a href="#comecar" class="link-nav link">COMEÇAR</a></li>
                             <li><a href="#avaliacoes" class="link-nav link">AVALIAÇÕES</a></li>
+                            <!-- Acessibilidade -->
+                            <nav class="navbar mobile navbar-default navbar-fixed-top navbar-shrink controllSize">
+                                <div class="boxCtrl" style="font-size: 23.5px;"> 
+                                    <a href="javascript:void(0);" class="decrease-text" title="Diminuir fonte">A-</a> 
+                                    <a href="javascript:void(0);" class="increase-text" title="Aumentar fonte">A+</a> 
+                                    <a href="javascript:void(0);" class="normal-text" 	 title="Fonte normal">A</a> 
+                                    <a href="javascript:void(0);" class="contrast-b" 	 title="Contraste preto/branco">A</a> 
+                                    <a href="javascript:void(0);" class="contrast-w" 	 title="Contraste branco/preto" >A</a>
+                                </div>
+                            </nav>
                         </ul>
                     </nav>
                     
                     <!-- Acessibilidade -->
-                    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink controllSize">
+                    <nav class="navbar desktop navbar-default navbar-fixed-top navbar-shrink controllSize">
                         <div class="boxCtrl" style="font-size: 23.5px;"> 
-                            <a href="javascript:void(0);" id="decrease-text" title="Diminuir fonte">A-</a> 
-                            <a href="javascript:void(0);" id="increase-text" title="Aumentar fonte">A+</a> 
-                            <a href="javascript:void(0);" id="normal-text" 	 title="Fonte normal">A</a> 
-                            <a href="javascript:void(0);" id="contrast-b" 	 title="Contraste preto/branco">A</a> 
-                            <a href="javascript:void(0);" id="contrast-w" 	 title="Contraste branco/preto" >A</a>
+                            <a href="javascript:void(0);" class="decrease-text" title="Diminuir fonte">A-</a> 
+                            <a href="javascript:void(0);" class="increase-text" title="Aumentar fonte">A+</a> 
+                            <a href="javascript:void(0);" class="normal-text" 	 title="Fonte normal">A</a> 
+                            <a href="javascript:void(0);" class="contrast-b" 	 title="Contraste preto/branco">A</a> 
+                            <a href="javascript:void(0);" class="contrast-w" 	 title="Contraste branco/preto" >A</a>
                         </div>
                     </nav>
                     <a href="home.php" class="regular button green-button login-button">ENTRAR <i class="fa-solid fa-right-to-bracket"></i></a>

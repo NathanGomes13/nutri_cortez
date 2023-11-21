@@ -78,7 +78,7 @@
     const datasFormatadas = pastWeeksDates.map(formatarData);
     const ctx = document.getElementById('graficoPesoSemanal');
     new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
         labels: datasFormatadas,
         datasets: [{
@@ -88,10 +88,15 @@
                 'rgb(204, 236, 221)',
                 'rgb(127, 208, 169)',
             ],
+            pointBackgroundColor: [
+                'rgb(204, 236, 221)',
+                'rgb(127, 208, 169)',
+            ],
             borderColor: [
                 'rgb(1, 179, 93)',
             ],
-            borderWidth: 2
+            borderWidth: 4,
+            fill: true
         }]
     },
     options: {

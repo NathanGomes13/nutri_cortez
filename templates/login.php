@@ -35,7 +35,7 @@ unset($_SESSION['email_usuario']);
         <div class="container">
             <div class="box-form">
                 <h3>Entrar</h3>
-                <span>Não tem uma conta? <a href="cadastro.php">Registre-se</a></span>
+                <span>Não tem uma conta? <a class="text-primary" href="cadastro.php">Registre-se</a></span>
                 <form action="php-logic/login-logic.php" method="POST">
                     <?php if (isset($_GET['error'])) { ?>
                         <p class="error regular"><?php echo $_GET['error']; ?></p>

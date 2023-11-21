@@ -479,6 +479,16 @@
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
     }
+    @media (max-width:440px){
+        .modal-content .modal-header {
+            flex-direction: column-reverse;
+        }
+    }
+    @media (max-width:390px){
+        .modal-content .modal-body .row .refeicao-box:not(.preencher) .tit-box::before {
+            transform: scaleY(3) scaleX(1.16) translateX(-50%);
+        }
+    }
 }
 
 // CADASTRAR CALENDARIO 

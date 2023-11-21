@@ -210,12 +210,12 @@ input[type=number]:not(#idade) {
                 background-color: #c8c8c8;
                 border-color: #333;
             }
-            &#contrast-b {
+            &.contrast-b {
                 background-color: #333;
                 color: #fff;
                 font-weight: bold;
             }
-            &#contrast-w {
+            &.contrast-w {
                 background-color: #f4f4f4;
                 color: #333;
                 font-weight: bold;
@@ -291,11 +291,20 @@ html body.contrast-black {
     // header
     #header .nav-container #nav-header ul a {
         color: white !important;
+    }
+    #header .nav-container #nav-header ul .controllSize a:not(.contrast-b){
+        color: var(--grey-parag) !important;
     }.trigger-menu-wrapper.active::before {
         background-color: var(--dark-bg-color) !important;
     }
     #header .trigger-menu-wrapper::before{
         background-color: var(--dark-bg-color);
+    }
+    #header .nav-container #nav-header:before {
+        background-color: var(--dark-bg-color);
+    }
+    #header .nav-container #nav-header ul li a {
+        background: var(--dark-bg-color);
     }
     // value 
     #value-proposition .text-content{
@@ -366,7 +375,7 @@ html body.contrast-black {
     #cards .swiper1:after, #cards .swiper2:after {
         background: linear-gradient(to left, var(--dark-bg-color), transparent);
     }
-    .boxCtrl a:not(#contrast-b){
+    .boxCtrl a:not(.contrast-b){
         color: #333 !important;
     }
     header:not(.prato, .topico){
@@ -393,10 +402,40 @@ html body.contrast-black {
     .box-form::before {
         background-color: var(--dark-bg-color);
         opacity: 0.9;
+    }#cadastro-login-sec .box-form::before {
+        background-color: var(--dark-bg-color);
+        opacity: 0.9;
+    }
+    #cadastro-login-sec a.text-primary{
+        color: #8dc4ff !important;
     }
     .informacoes-detalhadas h2,
     .informacoes-detalhadas p{
         color: var(--grey-parag) !important;
+    }
+    #visualizar .modal-content{
+        .macronutrientes{
+            p{
+                color: #967a5c !important;
+            }
+            span{
+                color: var(--grey-parag) !important;
+            }
+        }
+        p, span#start{
+            color: var(--grey-parag) !important;
+        }
+        h5.modal-title{
+            color: var(--dark-color-menu) !important;
+        }
+        .tit-box h5{
+            color: var(--light-color-menu) !important;
+        }
+    }
+    #confirmationModal .modal-content {
+        background-color: var(--dark-bg-color);
+    }#confirmationPModal .modal-content {
+        background-color: var(--dark-bg-color);
     }
 }
 /* Constrast Black(profile) */

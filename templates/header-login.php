@@ -12,7 +12,7 @@
                             <div class="bar"></div>
                             <div class="bar"></div>
                         </div>
-                        <a href="#">
+                        <a href="index.php">
                             <svg width="77" height="56" viewBox="0 0 77 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M45.204 13.7496C44.4796 12.9587 45.9814 7.74805 37.1635 4.19239C35.7133 4.45557 34.0831 11.7838 42.6514 14.0255C45.2127 15.3059 44.8093 17.4402 44.8093 18.6265H46.4568C46.4568 18.6265 45.7828 14.8634 48.7933 13.4844C50.8417 12.5465 56.4988 12.2457 58 3.79291C55.1378 2.13797 44.973 5.36398 45.204 13.7496ZM43.126 12.3236C42.9515 12.4445 42.7118 12.4008 42.5909 12.2262C41.7524 11.0117 39.4334 8.20932 38.4082 7.1868C38.2578 7.03709 38.2578 6.79337 38.4082 6.64363C38.5579 6.49324 38.8016 6.49324 38.9514 6.64363C40.0404 7.73465 42.3325 10.5048 43.2234 11.7884C43.3442 11.963 43.3006 12.2027 43.126 12.3236ZM53.8736 6.08705C51.0699 7.85883 48.7784 10.8069 47.7452 12.4081C47.6304 12.5861 47.392 12.6371 47.2141 12.5223C47.0362 12.4068 46.9852 12.1691 47.1006 11.9905C48.1809 10.3248 50.5012 7.31699 53.462 5.4378C53.6413 5.32367 53.8783 5.37738 53.9924 5.55665C54.1059 5.73591 54.0529 5.97293 53.8736 6.08705Z" fill="#01B35D"/>
                                 <rect x="44" y="14" width="3" height="16" fill="#01B35D"/>
@@ -32,11 +32,11 @@
                     <!-- Acessibilidade -->
                     <nav class="navbar navbar-default navbar-fixed-top navbar-shrink controllSize">
                         <div class="boxCtrl" style="font-size: 23.5px;"> 
-                            <a href="javascript:void(0);" id="decrease-text" title="Diminuir fonte">A-</a> 
-                            <a href="javascript:void(0);" id="increase-text" title="Aumentar fonte">A+</a> 
-                            <a href="javascript:void(0);" id="normal-text" 	 title="Fonte normal">A</a> 
-                            <a href="javascript:void(0);" id="contrast-b" 	 title="Contraste preto/branco">A</a> 
-                            <a href="javascript:void(0);" id="contrast-w" 	 title="Contraste branco/preto" >A</a>
+                            <a href="javascript:void(0);" class="decrease-text" title="Diminuir fonte">A-</a> 
+                            <a href="javascript:void(0);" class="increase-text" title="Aumentar fonte">A+</a> 
+                            <a href="javascript:void(0);" class="normal-text" 	 title="Fonte normal">A</a> 
+                            <a href="javascript:void(0);" class="contrast-b" 	 title="Contraste preto/branco">A</a> 
+                            <a href="javascript:void(0);" class="contrast-w" 	 title="Contraste branco/preto" >A</a>
                         </div>
                     </nav>
                     <nav id="nav-header">

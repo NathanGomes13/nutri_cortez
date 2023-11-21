@@ -84,6 +84,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password1']
 			}
 			//Caso NÃO tenha nada em branco
 			else{
+				$senha_usuario = password_hash($senha_usuario, PASSWORD_DEFAULT);
 				$result_usuario = "INSERT INTO usuarios(nome, email, senha, phone, sexo, idade, peso, altura, nivel_atividade, objetivo) VALUES ('$nome_usuario','$email_usuario','$senha_usuario','$phone_usuario','$sexo_usuario','$idade_usuario','$peso_usuario','$altura_usuario','$ativ_fisica_usuario','$objetivo_usuario')";
 				$resultado_usuario = mysqli_query($conn, $result_usuario);
 

@@ -206,12 +206,12 @@ input[type=number]:not(#idade) {
   background-color: #c8c8c8;
   border-color: #333;
 }
-.controllSize .boxCtrl a#contrast-b {
+.controllSize .boxCtrl a.contrast-b {
   background-color: #333;
   color: #fff;
   font-weight: bold;
 }
-.controllSize .boxCtrl a#contrast-w {
+.controllSize .boxCtrl a.contrast-w {
   background-color: #f4f4f4;
   color: #333;
   font-weight: bold;
@@ -280,11 +280,20 @@ html body.contrast-black h1, html body.contrast-black h2, html body.contrast-bla
 html body.contrast-black #header .nav-container #nav-header ul a {
   color: white !important;
 }
+html body.contrast-black #header .nav-container #nav-header ul .controllSize a:not(.contrast-b) {
+  color: var(--grey-parag) !important;
+}
 html body.contrast-black .trigger-menu-wrapper.active::before {
   background-color: var(--dark-bg-color) !important;
 }
 html body.contrast-black #header .trigger-menu-wrapper::before {
   background-color: var(--dark-bg-color);
+}
+html body.contrast-black #header .nav-container #nav-header:before {
+  background-color: var(--dark-bg-color);
+}
+html body.contrast-black #header .nav-container #nav-header ul li a {
+  background: var(--dark-bg-color);
 }
 html body.contrast-black #value-proposition .text-content h1, html body.contrast-black #value-proposition .text-content p {
   color: black !important;
@@ -354,7 +363,7 @@ html body.contrast-black #cards .swiper1:before, html body.contrast-black #cards
 html body.contrast-black #cards .swiper1:after, html body.contrast-black #cards .swiper2:after {
   background: linear-gradient(to left, var(--dark-bg-color), transparent);
 }
-html body.contrast-black .boxCtrl a:not(#contrast-b) {
+html body.contrast-black .boxCtrl a:not(.contrast-b) {
   color: #333 !important;
 }
 html body.contrast-black header:not(.prato, .topico) {
@@ -380,9 +389,37 @@ html body.contrast-black .box-form::before {
   background-color: var(--dark-bg-color);
   opacity: 0.9;
 }
+html body.contrast-black #cadastro-login-sec .box-form::before {
+  background-color: var(--dark-bg-color);
+  opacity: 0.9;
+}
+html body.contrast-black #cadastro-login-sec a.text-primary {
+  color: #8dc4ff !important;
+}
 html body.contrast-black .informacoes-detalhadas h2,
 html body.contrast-black .informacoes-detalhadas p {
   color: var(--grey-parag) !important;
+}
+html body.contrast-black #visualizar .modal-content .macronutrientes p {
+  color: #967a5c !important;
+}
+html body.contrast-black #visualizar .modal-content .macronutrientes span {
+  color: var(--grey-parag) !important;
+}
+html body.contrast-black #visualizar .modal-content p, html body.contrast-black #visualizar .modal-content span#start {
+  color: var(--grey-parag) !important;
+}
+html body.contrast-black #visualizar .modal-content h5.modal-title {
+  color: var(--dark-color-menu) !important;
+}
+html body.contrast-black #visualizar .modal-content .tit-box h5 {
+  color: var(--light-color-menu) !important;
+}
+html body.contrast-black #confirmationModal .modal-content {
+  background-color: var(--dark-bg-color);
+}
+html body.contrast-black #confirmationPModal .modal-content {
+  background-color: var(--dark-bg-color);
 }
 
 /* Constrast Black(profile) */

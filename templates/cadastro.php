@@ -52,7 +52,7 @@ unset($_SESSION['objetivo_usuario']);
         <div class="container">
             <div class="box-form">
                 <h3>Registrar-se</h3>
-                <span>Já têm uma conta? <a href="login.php">Entrar</a></span>
+                <span>Já têm uma conta? <a class="text-primary" href="login.php">Entrar</a></span>
                 <form name="form_cadastro" method="POST" action="php-logic/cadastro-logic.php">
                    
                     <?php if (isset($_GET['error'])) { ?>
