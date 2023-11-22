@@ -135,11 +135,11 @@ p {
 }
 
 .titulo {
-  font-size: 50px;
+  font-size: 50px !important;
 }
 
 .titulo-medio {
-  font-size: 28px;
+  font-size: 28px !important;
 }
 
 .regular {

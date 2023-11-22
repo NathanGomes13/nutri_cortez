@@ -16,7 +16,8 @@ if(isset($_SESSION['msg'])){
 <div id="calendar-box">
     <div class="tit-box">
         <h4 class="titulo-medio">CALENDÁRIO DE REFEIÇÕES</h4>
-        <p>Selecione o dia em que deseja organizar sua próxima refeição. Não esqueça de salvar!</p>
+        <p>Selecione o dia em que deseja organizar sua próxima refeição. Não esqueça de salvar!</p><br>
+        <p class="text-danger"><i class="fa-solid fa-circle-exclamation" style="color: #f17f7f;"></i> Para usuários em dispositivo touch, é necessário pressionar o toque por meio segundo no dia desejado.</p>
     </div>
     <div id='calendar'></div>
 </div>
