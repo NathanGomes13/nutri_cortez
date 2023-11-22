@@ -50,4 +50,34 @@
   #footer .desktop {
     display: none;
   }
+}
+#footer .box-direitos {
+  position: relative;
+}
+#footer .box-direitos #direitos-imagens {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+#footer .box-direitos #links-direitos {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  background-color: var(--dark-bg-color);
+  border: 2px solid var(--green);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  display: none;
+}
+#footer .box-direitos #links-direitos a:hover {
+  color: var(--green) !important;
+}
+#footer .box-direitos #links-direitos:hover {
+  display: flex;
+}
+#footer .box-direitos #direitos-imagens:hover ~ #links-direitos {
+  display: flex;
 }/*# sourceMappingURL=footer.css.map */

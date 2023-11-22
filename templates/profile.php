@@ -39,9 +39,17 @@ if ($result && mysqli_num_rows($result) > 0) {
     <!-- Site -->
     <link rel="stylesheet" href="../static/styles/style.css">
     <link rel="stylesheet" href="../static/styles/user-page.css">
-    <title>Editar Perfil</title>
+    <title>Perfil - <?php echo $nome_usuario ?></title>
+    <link rel="shortcut icon" href="../static/imagens/favicon.ico" type="image/x-icon">
 </head>
 <body id="profile">
+    <div id="preloader">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
 <?php
 if(isset($_SESSION['error'])){
     echo $_SESSION['error'];
@@ -268,6 +276,9 @@ if(isset($_SESSION['success'])){
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="../static/js/jquery.js"></script>
 <script src="../static/js/wcag-font-size.js"></script>
+<!-- preloader -->
+<script src="../static/js/preloader.js"></script>
+
 </body>
 </html>
 <?php 

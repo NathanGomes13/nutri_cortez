@@ -65,7 +65,15 @@
     <div class="line-detail"></div>
     <div class="footer-bottom">
         <div class="container">
-            <span>©2023 - NutriCortez | Todos os direitos reservados</span>
+            <span>© 2023 - NutriCortez | Todos os direitos reservados</span>
+            <div class="box-direitos">
+                <span style="text-decoration: underline !important;" id="direitos-imagens">Direitos Freepik</span>
+                <ul id="links-direitos">
+                    <li><a target="_blank" style="text-decoration: underline !important;" href="https://br.freepik.com/fotos-gratis/fundo-de-textura-padrao-de-marmore-preto-marmore-da-tailandia-marmore-natural-abstrato-em-preto-e-branco-para-design_1174373.htm#query=marmore%20texture&position=10&from_view=search&track=ais">Textura de mármore (Tirachard)</a></li>
+                    <li><a target="_blank" style="text-decoration: underline !important;" href="https://br.freepik.com/fotos-gratis/almoco-saudavel-para-ir-embalado-na-lancheira_5009132.htm#page=2&query=nutri%20food&position=28&from_view=search&track=ais">Banner Index (Valeria_Aksakova)</a></li>
+                    <li><a target="_blank" style="text-decoration: underline !important;" href="https://br.freepik.com/fotos-gratis/dieta-cetogenica-de-baixo-teor-de-carboidratos-selecao-de-alimentos-em-fundo-branco_17245668.htm#query=nutri%20food&position=36&from_view=search&track=ais">Background Cadastro (Master1305)</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </footer>

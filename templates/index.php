@@ -19,10 +19,16 @@ include_once "php-logic/connection.php";
     <!-- Site -->
     <link rel="stylesheet" href="../static/styles/style.css">
     <link rel="stylesheet" href="../static/styles/index.css">
-    <title>INDEX Nutri Cortez</title>
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <title>Nutri Cortez</title>
+    <link rel="shortcut icon" href="../static/imagens/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div id="preloader">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
 
     <?php
         include_once "header.php"
@@ -319,6 +325,9 @@ include_once "php-logic/connection.php";
     ?>
 
     <!-- ==============SCRIPTS=============== -->
+    <!-- preloader -->
+    <script src="../static/js/preloader.js"></script>
+    
     <script>
     let swiper;
 

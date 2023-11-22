@@ -57,4 +57,34 @@
             display: none;
         }
     }
+    .box-direitos{
+        position: relative;
+        #direitos-imagens{
+            width: fit-content;
+            margin: 0 auto;
+        }
+        #links-direitos{
+            // display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100%);
+            background-color: var(--dark-bg-color);
+            border: 2px solid var(--green);
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: .25rem;
+            display: none;
+            a:hover{
+                color: var(--green) !important;
+            }
+            &:hover{
+                display: flex;
+            }
+        }
+        #direitos-imagens:hover ~ #links-direitos{
+            display: flex;
+        }
+    }
 }
