@@ -936,6 +936,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks: true, // can click day/week names to navigate views
         editable: false,
         dayMaxEvents: true, // allow "more" link when too many events
+        longPressDelay: 0,
         events: 'php-logic/list-events.php',
         extraParams: function() {
             return {
